@@ -70,11 +70,11 @@ The project demonstrates a complete, reproducible data science workflow: loading
 
 3. **Production is heavily US-centric with a long tail.** The United States contributes close to 2,800 titles — nearly three times India in second place (approximately 1,000). The United Kingdom follows at around 400, and every other country in the top ten falls below 300, indicating that non-US local production remains limited in absolute terms.
 
-4. **The library targets mature audiences.** TV-MA (>3,000 titles) and TV-14 (~2,100) are by far the most common ratings, while family-friendly ratings (TV-Y, TV-Y7, TV-G) are marginal. Netflix's content mix is clearly skewed toward adult viewers rather than children's programming.
+4. **The library targets mature audiences.** TV-MA (>3,000 titles) and TV-14 (~2,200) are by far the most common ratings, while family-friendly ratings (TV-Y, TV-Y7, TV-G) are marginal. Netflix's content mix is clearly skewed toward adult viewers rather than children's programming.
 
 ## Limitation
 
-Country counts are derived from the raw `country` field without splitting co-production entries. A title listed as "United States, India" is therefore counted as a single distinct country string rather than being attributed to each country involved. The figures thus represent "country mentions" rather than exclusive country of origin, and titles with multiple production countries are undercounted per country. In addition, the dataset is a mid-2021 snapshot, so 2021 figures are incomplete and no conclusions about post-2021 growth should be drawn from this analysis.
+Country counts are derived from the raw `country` field without splitting co-production entries. A title listed as "United States, India" is therefore counted as a single distinct country string rather than being attributed to each country involved. The figures thus represent "country mentions" rather than exclusive country of origin, and titles with multiple production countries are undercounted per country. In addition, the most recent date_added value in the dataset is 2021-09-25, so 2021 covers only about nine months. The apparent decline after 2019 is therefore an artefact of the snapshot timing rather than a real reduction in output.
 
 ## Project Status
 
