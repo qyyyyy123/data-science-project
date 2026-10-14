@@ -4,6 +4,10 @@
 
 What trends can be observed in the composition, growth, geographic origin, and audience targeting of Netflix movies and TV shows?
 
+## Summary
+
+This analysis covers roughly 8,800 Netflix titles. The catalogue is dominated by movies (about 70% of all titles), content additions peaked in 2019 rather than 2021, production is heavily concentrated in the United States, and maturity ratings skew strongly toward adult audiences. The apparent decline after 2019 is a data artefact: the dataset's most recent entry is dated 2021-09-25, so 2021 covers only about nine months.
+
 ## Project Overview
 
 This project performs exploratory data analysis (EDA) on the Netflix Movies and TV Shows dataset to characterise how the platform's catalogue is structured. It examines four dimensions: the balance between movies and TV shows, the growth of content additions over time, the geographic concentration of production, and the distribution of maturity ratings.
@@ -19,7 +23,7 @@ The project demonstrates a complete, reproducible data science workflow: loading
 | Original source | Flixable (public Netflix catalogue listing) |
 | Licence | CC0: Public Domain — verify the *License* field on the Kaggle dataset page before reuse |
 | Records | Approximately 8,800 titles |
-| Snapshot | Mid-2021; the catalogue has changed substantially since |
+| Snapshot | Most recent `date_added` value is 2021-09-25; the catalogue has changed substantially since |
 | Content | show_id, type, title, director, cast, country, date_added, release_year, rating, duration, listed_in, description |
 
 **Usage permission:** This dataset is publicly available and is used here strictly for educational and portfolio purposes. It contains no personal or identifying information about individuals, no credentials, and no restricted material.
@@ -66,7 +70,7 @@ The project demonstrates a complete, reproducible data science workflow: loading
 
 1. **The catalogue is film-dominated.** Movies account for roughly 6,100 titles against roughly 2,700 TV shows — about 70% of the library. Despite Netflix's reputation for original series, film remains the numerical backbone of the catalogue.
 
-2. **Content growth peaked in 2019, not 2021.** Annual additions were negligible before 2014, accelerated sharply from 2015, climbed to around 1,100 (2017) and 1,600 (2018), and peaked at approximately 2,000 titles in 2019. The apparent decline in 2020–2021 is an artefact of the dataset snapshot being taken mid-2021 (see Limitation), not evidence of reduced production.
+2. **Content growth peaked in 2019, not 2021.** Annual additions were negligible before 2014, accelerated sharply from 2015, climbed to around 1,100 (2017) and 1,600 (2018), and peaked at approximately 2,000 titles in 2019. The apparent decline in 2020–2021 is an artefact of the dataset snapshot rather than evidence of reduced production.
 
 3. **Production is heavily US-centric with a long tail.** The United States contributes close to 2,800 titles — nearly three times India in second place (approximately 1,000). The United Kingdom follows at around 400, and every other country in the top ten falls below 300, indicating that non-US local production remains limited in absolute terms.
 
@@ -74,7 +78,7 @@ The project demonstrates a complete, reproducible data science workflow: loading
 
 ## Limitation
 
-Country counts are derived from the raw `country` field without splitting co-production entries. A title listed as "United States, India" is therefore counted as a single distinct country string rather than being attributed to each country involved. The figures thus represent "country mentions" rather than exclusive country of origin, and titles with multiple production countries are undercounted per country. In addition, the most recent date_added value in the dataset is 2021-09-25, so 2021 covers only about nine months. The apparent decline after 2019 is therefore an artefact of the snapshot timing rather than a real reduction in output.
+Country counts are derived from the raw `country` field without splitting co-production entries. A title listed as "United States, India" is therefore counted as a single distinct country string rather than being attributed to each country involved. The figures thus represent "country mentions" rather than exclusive country of origin. In addition, the most recent `date_added` value in the dataset is 2021-09-25, so 2021 covers only about nine months and no conclusions about post-2021 growth should be drawn from this analysis.
 
 ## Project Status
 
@@ -83,6 +87,10 @@ Completed — all four planned analyses are finished and reproducible.
 ## Instructions for Running the Analysis
 
 ### 1. Clone the repository
+
+bash
+git clone https://github.com/qyyyyy123/data-science-project.git
+cd data-science-project
 
 ### 2. Create and activate a virtual environment (recommended)
 
